@@ -10,3 +10,14 @@ def same_frequency(num1, num2):
         >>> same_frequency(1212, 2211)
         True
     """
+
+    num1_counts = {}
+    num2_counts = {}
+
+    for x in str(num1):
+        num1_counts[x] = num1_counts.get(x, 0) + 1
+
+    for x in str(num2):
+        num2_counts[x] = num2_counts.get(x, 0) + 1
+
+    return num1_counts == num2_counts
